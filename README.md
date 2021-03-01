@@ -15,11 +15,12 @@
 
 There are no steps to install. Please navigate to the deployed application using the link below.
 
+
 # Usage: 
 
-Navigate to the deployed page to use the application. Below is a snapshot of the site.
+Navigate to the deployed page to use the application. Follow the prompts to enter events into your schedule. 
 
-![First image of site](./assets/images/screenshot4.png)
+![First image of site](./assets/images/)
 
 
 ## License: 
