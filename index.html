@@ -14,6 +14,9 @@
 </head>
 
 <body>
+
+  <!-- jumbotron section -->
+
   <header class="jumbotron">
     <h1 class="display-3">Work Day Scheduler</h1>
     <br>
@@ -22,9 +25,12 @@
     <p id="currentDay" class="lead"></p>
   </header>
   <div id="sched" class="container">
+
+    <!-- time blocks section -->
+
     <div class="row time-block">
       <p class="col-2 hour">7am</p>
-      <textarea id="txt7" class="col-8 description"></textarea>
+      <textarea id="txt7" class="col-8 description" hr="07"></textarea>
       <button class="col-2 saveBtn"></button>
     </div>
     <div class="row time-block">
@@ -84,6 +90,8 @@
     </div>
   </div>
 
+
+  <!-- attached script links for js functionality -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
   <script src="Develop/script.js"></script>
