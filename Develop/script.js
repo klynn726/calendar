@@ -26,21 +26,28 @@ console.log(timeNow);
 function timeslot() {
   
   var timeChunk = document.getElementsByClassName("description");
-  var timeSlot = timeChunk.getAttritibute("hr");
 
-  //loop through the items in the timeSlot array
+  //loop through the items in the timeChunk array
 
   for (i = 0; i < timeChunk.length; i++){
 
+  var timeSlot = timeChunk[i].getAttribute("hr");
+
   if (timeNow < timeSlot) {
-    document.getElementsByClassName("description").classList.add("future");
+    timeChunk[i].classList.add("future");
   }
 
   else if (timeNow > timeSlot) {
-    document.getElementsByClassName("description").classList.add("past");
+    timeChunk[i].classList.add("past");
   }
 
   else if (timeNow == timeSlot) {
-    document.getElementById("description").classList.add("present");
+    timeChunk[i].classList.add("present");
   }
 }}
+
+
+
+
+
+timeslot();
