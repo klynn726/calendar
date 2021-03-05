@@ -19,15 +19,22 @@ console.log(timeNow);
 
 //if timeNow is less than the hr attribute on the textarea tag then, else if greater than, and else equal add a class in each case
 
-if (timeNow < document.getElementsByClassName("description").attr(".hr")) {
-  document.getElementById(".description").classList.add('.future');
-}
-//https://www.w3schools.com/jsref/prop_element_classlist.asp resource for adding classes dynamically
+//the below correctly targets and evaluates the time (theoretically) but im not sure it correctly assign the proper class to the same thing that was being evaluated in the first line.
 
-else if (timeNow > document.getElementsByClassName("description").attr("hr")) {
-  document.getElementById(".description").classList.add('.past');
+var timeChunk = document.getElementsByClassName('hr');
+timeChunkString = String(timeChunk);
+
+//https://www.w3schools.com/jsref/prop_element_classlist.asp 
+// resource for adding classes dynamically
+
+if (timeNow < timeChunkString) {
+  document.getElementsByClassName("description").classList.add("future");
 }
 
-else if (timeNow == document.getElementsByClassName("description").attr("hr")) {
-  document.getElementById(".description").classList.add('.present');
+else if (timeNow > timeChunkString) {
+  document.getElementsByClassName("description").classList.add("past");
+}
+
+else if (timeNow == timeChunkString) {
+  document.getElementById("description").classList.add('present');
 }
