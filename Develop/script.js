@@ -17,25 +17,27 @@ console.log(timeNow);
 //https://stackoverflow.com/questions/1735230/can-i-add-a-custom-attribute-to-an-html-tag#:~:text=Yes%2C%20you%20can%20do%20it!&text=')%3B%20%2F%2F%20Setter-,Element.,used%20for%20the%20current%20tag.
 //add a custom html attribute to the tag for the box you want to change the background color of
 
-//if timeNow is less than the hr attribute on the textarea tag then, else if greater than, and else equal add a class in each case
-
-//the below correctly targets and evaluates the time (theoretically) but im not sure it correctly assign the proper class to the same thing that was being evaluated in the first line.
-
-var timeChunk = document.getElementsByClassName("description")
-var timeSlot = timeChunk.getAttritibute("hr");
-
+//if timeNow is less than the hr attribute on the
+//textarea tag then, else if greater than, and else equal add a class 
+//in each case
 
 //https://www.w3schools.com/jsref/prop_element_classlist.asp 
 // resource for adding classes dynamically
 
-if (timeNow < timeSlot) {
-  document.getElementsByClassName("description").classList.add("future");
-}
+function timeslot() {
 
-else if (timeNow > timeSlot) {
-  document.getElementsByClassName("description").classList.add("past");
-}
+  var timeChunk = document.getElementsByClassName("description");
+  var timeSlot = timeChunk.getAttritibute("hr");
 
-else if (timeNow == timeSlot) {
-  document.getElementById("description").classList.add('present');
+  if (timeNow < timeSlot) {
+    document.getElementsByClassName("description").classList.add("future");
+  }
+
+  else if (timeNow > timeSlot) {
+    document.getElementsByClassName("description").classList.add("past");
+  }
+
+  else if (timeNow == timeSlot) {
+    document.getElementById("description").classList.add('present');
+  }
 }
