@@ -21,20 +21,21 @@ console.log(timeNow);
 
 //the below correctly targets and evaluates the time (theoretically) but im not sure it correctly assign the proper class to the same thing that was being evaluated in the first line.
 
-var timeChunk = document.getElementsByClassName('hr');
-timeChunkString = String(timeChunk);
+var timeChunk = document.getElementsByClassName("description")
+var timeSlot = timeChunk.getAttritibute("hr");
+
 
 //https://www.w3schools.com/jsref/prop_element_classlist.asp 
 // resource for adding classes dynamically
 
-if (timeNow < timeChunkString) {
+if (timeNow < timeSlot) {
   document.getElementsByClassName("description").classList.add("future");
 }
 
-else if (timeNow > timeChunkString) {
+else if (timeNow > timeSlot) {
   document.getElementsByClassName("description").classList.add("past");
 }
 
-else if (timeNow == timeChunkString) {
+else if (timeNow == timeSlot) {
   document.getElementById("description").classList.add('present');
 }
