@@ -34,17 +34,18 @@ textarea {
   white-space: pre-wrap;
   height: 80px;
   border-top: 1px solid white;
-  ;
+
 }
 
 .hour {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+  padding: 20px;
 }
 
 .past {
-  background-color: #6b0c91;
+  background-color: #9e85a8;
   color: white;
 }
 

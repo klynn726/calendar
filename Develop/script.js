@@ -11,9 +11,9 @@ console.log(timeNow);
 //https://momentjs.com/docs/#/get-set/
 
 
-//how to tell what time the block is associated with?
 //https://stackoverflow.com/questions/1735230/can-i-add-a-custom-attribute-to-an-html-tag#:~:text=Yes%2C%20you%20can%20do%20it!&text=')%3B%20%2F%2F%20Setter-,Element.,used%20for%20the%20current%20tag.
-//add a custom html attribute to the tag for the box you want to change the background color of
+//add a custom html attribute to the tag for the box you want to change
+// the background color of
 
 
 //if timeNow is less than the hr attribute on the
@@ -46,8 +46,28 @@ function timeslot() {
   }
 }}
 
-
-
-
-
 timeslot();
+
+// var userInput = document.querySelector(".description");
+var button = document.querySelectorAll(".saveBtn");
+
+//set info to local storage
+//attach to the correct line
+  
+  for (i=0; i < 12; i++) {
+    button[i].addEventListener('click', function(event){ 
+      event.preventDefault();
+        var buttonHour = event.target.getAttribute("btnHr");
+        var userInput = document.querySelector(`[hr = "${buttonHour}"]`).value;
+          localStorage.setItem(buttonHour, userInput);
+  })};
+
+//get storage items and put them in their correct places
+//onload  https://www.w3schools.com/js/js_events.asp
+
+document.onload = function(){
+  //have the text written to the page here 
+  localStorage.getItem(buttonHour, userInput);
+    
+
+};
