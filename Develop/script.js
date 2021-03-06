@@ -63,11 +63,20 @@ var button = document.querySelectorAll(".saveBtn");
   })};
 
 //get storage items and put them in their correct places
-//onload  https://www.w3schools.com/js/js_events.asp
+
+//onload resource https://www.w3schools.com/js/js_events.asp
 
 document.onload = function(){
+
   //have the text written to the page here 
   localStorage.getItem(buttonHour, userInput);
-    
+  
+  // if (buttonHour == hr)
+  //then get the description or textarea with that number and 
+  //change the inner html to the stored value
 
-};
+//userInput to innerhtml of the textarea that matches buttonHour & hr
+
+  document.querySelector(`[hr = "${buttonHour}"]`).innerHTML = localStorage.getItem(userInput);
+  
+}
