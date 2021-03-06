@@ -20,7 +20,7 @@ There are no steps to install. Please navigate to the deployed application using
 
 Navigate to the deployed page to use the application. Follow the prompts to enter events into your schedule. 
 
-![First image of site](./assets/images/)
+![First image of site](./develop/images/screenshot-scheduler.png)
 
 
 ## License: 
