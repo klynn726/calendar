@@ -18,7 +18,7 @@ There are no steps to install. Please navigate to the deployed application using
 
 # Usage: 
 
-Navigate to the deployed page to use the application. Follow the prompts to enter events into your schedule. 
+Navigate to the deployed page to use the application. Enter events into your schedule and click save. 
 
 ![First image of site](./develop/images/screenshot-scheduler.png)
 
